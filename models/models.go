@@ -46,7 +46,7 @@ type Address struct {
 }
 
 type Order struct {
-	Order_ID       primitive.ObjectId `bson:"order_id"`
+	Order_ID       primitive.ObjectID `bson:"order_id"`
 	Order_Cart     []ProductUser      `json:"order_id" bson:"order_id"`
 	Ordered_At     time.Time          `json:"ordered_at bson:"ordered_at"`
 	Price          int                `json:"total_price" bson:"total_price"`

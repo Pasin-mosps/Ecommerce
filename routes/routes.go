@@ -5,10 +5,10 @@ import (
 	"github.com/pasin-mosps/ecommerce/controllers"
 )
 
-func UserRoutes(incomingRoutes *gin.Engin) {
-	incomingRoutes.POST("/users/singup", controllers.SingUp())
-	incomingRoutes.POST("/user/login", controllers.Login())
-	incomingRoutes.POST("/admin/addproduct", controllers.ProductViewAdmin())
-	incomingRoutes.GET("/users/productview", controllers.SearchProduct())
-	incomingRoutes.GET("/user/search", controllers.SearchProductByQuery())
+func UserRoutes(router *gin.Engine) {
+	router.POST("/users/signup", controllers.SignUp)
+	router.POST("/user/login", controllers.Login)
+	router.POST("/admin/addproduct", controllers.ProductViewAdmin)
+	router.GET("/users/productview", controllers.SearchProduct)
+	router.GET("/user/search", controllers.SearchProductByQuery)
 }
